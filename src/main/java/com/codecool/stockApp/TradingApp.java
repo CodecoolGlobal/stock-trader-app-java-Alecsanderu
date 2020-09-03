@@ -7,6 +7,9 @@ import java.util.Scanner;
  * Provides a command line interface for stock trading.
  **/
 public class TradingApp {
+	StockAPIService service = new StockAPIService();
+	Trader trader = new Trader(service);
+
 	public static void main(String[] args) {
 	    TradingApp app = new TradingApp();
 	    app.start();
@@ -26,7 +29,7 @@ public class TradingApp {
 		}
 
 		try {
-			boolean purchased = Trader.getInstance().buy(symbol, price);
+			boolean purchased = trader.buy(symbol, price);
 			if (purchased) {
 				Logger.getInstance().log("Purchased stock!");
 			}

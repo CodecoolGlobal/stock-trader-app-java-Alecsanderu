@@ -9,18 +9,22 @@ public class Trader {
 
 	private static Trader instance;
 
-	public static Trader getInstance() {
-	    if (instance == null) {
-	        instance = new Trader();
-        }
-        return instance;
-    }
+//	public static Trader getInstance() {
+//	    if (instance == null) {
+//	        instance = new Trader();
+//        }
+//        return instance;
+//    }
 
 	private StockAPIService stockService;
 
-	public Trader() {
-        this.stockService = new StockAPIService();
-    }
+//	public Trader() {
+//        this.stockService = new StockAPIService();
+//    }
+
+    public Trader(StockAPIService StockApi) {
+		this.stockService = StockApi;
+	}
 
 	/** Checks the price of a stock, and buys it if the price is not greater than the bid amount.
 	 * 	@return whether any stock was bought */
