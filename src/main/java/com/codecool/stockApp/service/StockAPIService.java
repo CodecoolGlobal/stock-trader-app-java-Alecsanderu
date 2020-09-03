@@ -1,16 +1,19 @@
-package com.codecool.stockApp;
+package com.codecool.stockApp.service;
 
+import com.codecool.stockApp.service.RemoteURLReader;
 import org.json.JSONObject;
+import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 
 /**
  * Stock price service that gets prices from Yahoo.
  **/
+@Component
 public class StockAPIService {
 
 	private static final String apiPath = "https://run.mocky.io/v3/9e14e086-84c2-4f98-9e36-54928830c980?stock=%s";
-	private  RemoteURLReader reader = new RemoteURLReader();
+	private RemoteURLReader reader = new RemoteURLReader();
 
 
 	/** Get stock price from iex and return as a double

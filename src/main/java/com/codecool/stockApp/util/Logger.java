@@ -1,4 +1,6 @@
-package com.codecool.stockApp;
+package com.codecool.stockApp.util;
+
+import org.springframework.stereotype.Component;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -7,6 +9,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+@Component
 public class Logger {
 
     private static Logger instance;

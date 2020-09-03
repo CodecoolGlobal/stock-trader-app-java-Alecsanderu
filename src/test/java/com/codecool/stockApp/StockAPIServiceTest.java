@@ -1,5 +1,7 @@
 package com.codecool.stockApp;
 
+import com.codecool.stockApp.service.RemoteURLReader;
+import com.codecool.stockApp.service.StockAPIService;
 import org.json.JSONException;
 import org.junit.jupiter.api.Test;
 

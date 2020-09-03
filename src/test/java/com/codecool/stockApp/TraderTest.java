@@ -1,5 +1,7 @@
 package com.codecool.stockApp;
 
+import com.codecool.stockApp.service.StockAPIService;
+import com.codecool.stockApp.util.Trader;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
